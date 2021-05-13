@@ -8,7 +8,7 @@ chmod +x ts
 ./ts
 }
 get() {
-rm -fr David.lua
+rm -fr Keto.lua
 rm -fr sudo.lua
 wget "https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua"
 lua start.lua
