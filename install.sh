@@ -3,7 +3,7 @@ cd $HOME/Keto
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x David
+chmod +x Keto
 chmod +x ts
 ./ts
 }
