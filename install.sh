@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-cd $HOME/GranD
+cd $HOME/David
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x GranD
+chmod +x David
 chmod +x ts
 ./ts
 }
 get() {
-rm -fr GranD.lua
+rm -fr David.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/SourceGranD/GranD/master/GranD.lua"
+wget "https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua"
 lua start.lua
 }
 installall(){
@@ -48,7 +48,7 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd GranD
+cd David
 rm -rf luarocks*
 lua start.lua
 
