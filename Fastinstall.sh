@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-cd $HOME/David
+cd $HOME/Keto
 rm -rf $HOME/.telegram-cli
 install() {
 apt install dnsutils
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x David
+chmod +x Keto
 chmod +x ts
 ./ts
 }
