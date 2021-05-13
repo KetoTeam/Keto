@@ -8209,7 +8209,7 @@ end
 end
 if text == "تحديث" and DevDavid(msg) then
 dofile("David.lua")  
-send(msg.chat_id_, msg.id_, "⌔︙تم التحديث")
+send(msg.chat_id_, msg.id_, "⌔︙تم تحديث ملفات البوت")
 end
 
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
@@ -8942,12 +8942,12 @@ return false
 end
 if text =='تغيير المطور الاساسي ⌔' and VIP_DeV(msg) then
 send(msg.chat_id_, msg.id_,'⌔︙ارسل ايدي المطور الاساسي الجديد')
-database:set(bot_id..'LACKBOTSS:Ed:DevBots',true) 
+database:set(bot_id..'David:Ed:DevBots',true) 
 end
 if text =='تغيير المطور الاساسي ⌔' and not VIP_DeV(msg) then
 send(msg.chat_id_, msg.id_,'⌔︙تسرسح')
 end
-if database:get(bot_id.."LACKBOTSS:Ed:DevBots") then
+if database:get(bot_id.."David:Ed:DevBots") then
 if text and text:match("^(%d+)$") then
 local IdDe = text:match("^(%d+)$")
 send(msg.chat_id_,msg.id_, "⌔︙تم تحفظ المعلومات اضغط ( تحديث الملفات ⌔ ) للتنفيذ")
@@ -8962,7 +8962,7 @@ token = "]]..token..[["
 Sudo = ]]..IdDe..[[  
 ]])
 A:close()
-database:del(bot_id.."LACKBOTSS:Ed:DevBots")
+database:del(bot_id.."David:Ed:DevBots")
 end
 end
 if text == 'تفعيل البوت الخدمي ⌔' then
@@ -9246,8 +9246,8 @@ File:write(t)
 File:close()
 sendDocument(msg.chat_id_, msg.id_,'./File_Libs/'..bot_id..'.json', '⌔︙ عدد مجموعات التي في البوت { '..#list..'}')
 end
-if text == "تحديث السورس ⌔" then
-send(msg.chat_id_,msg.id_,'⌔︙تم التحديث')
+if text == "تحديث السورس ⌔" or text == "تحديث سورس" then
+send(msg.chat_id_,msg.id_,'⌔︙تم تحديث السورس')
 os.execute('rm -rf David.lua')
 os.execute('rm -rf start.lua')
 os.execute('wget https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua')
@@ -9257,7 +9257,7 @@ return false
 end
 if text == "تحديث الملفات ⌔" then
 dofile("David.lua")  
-send(msg.chat_id_, msg.id_, "⌔︙تم التحديث")
+send(msg.chat_id_, msg.id_, "⌔︙تم تحديث ملفات البوت")
 end
 end
 end --- Chat_Type = 'UserBot' 
