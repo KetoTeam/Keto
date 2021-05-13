@@ -7767,7 +7767,7 @@ end
 return false
 end
 if text == ("تحديث السورس") and DevDavid(msg) or text == ("تحديث سورس") and DevDavid(msg) then  
-send(msg.chat_id_,msg.id_,'⌔︙تم التحديث')
+send(msg.chat_id_,msg.id_,'⌔︙تم تحديث السورس')
 os.execute('rm -rf David.lua')
 os.execute('rm -rf start.lua')
 os.execute('wget https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua')
@@ -7776,7 +7776,7 @@ dofile('David.lua')
 return false
 end
 if text == "راسلني" then
-rpl = {"ها هلاو","انطق","كول"};
+rpl = {"ها هلاو","انطق","كول","احبك","تحبني ؟","شلخبار"};
 sender = rpl[math.random(#rpl)]
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' .. URL.escape(sender))
