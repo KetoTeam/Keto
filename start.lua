@@ -73,7 +73,7 @@ RunBot:write([[
 #!/usr/bin/env bash
 cd $HOME/Keto
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr David.lua
+rm -fr Keto.lua
 wget "https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua"
 while(true) do
 rm -fr ../.telegram-cli
@@ -88,7 +88,7 @@ cd $HOME/Keto
 while(true) do
 rm -fr ../.telegram-cli
 screen -S Keto -X kill
-screen -S Keto ./David
+screen -S Keto ./Keto
 done
 ]])
 RunTs:close()
