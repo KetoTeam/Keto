@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd $HOME/David
+cd $HOME/Keto
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
@@ -10,7 +10,7 @@ chmod +x ts
 get() {
 rm -fr David.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/DavidTeam0/David/master/David.lua"
+wget "https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua"
 lua start.lua
 }
 installall(){
@@ -48,7 +48,7 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd David
+cd Keto
 rm -rf luarocks*
 lua start.lua
 
