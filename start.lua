@@ -18,7 +18,7 @@ Write_Info_Sudo:write([[
 
 s = "uuuuu1"
 
-q = "KetoTeam"
+q = "KetoTaem"
 
 token = "]]..Token..[["
 
