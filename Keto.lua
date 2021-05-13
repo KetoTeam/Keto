@@ -508,9 +508,9 @@ end
 function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "KetoTeam")
-local NameUser = "[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
-local NameUserr = "[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
+local UserName = (data.username_ or "KetoTaem")
+local NameUser = "[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUserr = "[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
 send(msg.chat_id_, msg.id_,NameUser.."\n"..text.."\n— — — — — — — — —\n⌔︙تم تنفيذ الامر بخاصيه ( المسح )\n")
 return false
@@ -3488,19 +3488,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local Ketort = database:get(bot_id.."Keto:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if Ketort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA) 
 database:sadd(bot_id.."Keto:Special:User"..msg.chat_id_,result.sender_user_id_)  
 elseif Ketort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)
 database:sadd(bot_id.."Keto:Mod:User"..msg.chat_id_,result.sender_user_id_)  
 elseif Ketort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)  
 database:sadd(bot_id.."Keto:Manager"..msg.chat_id_,result.sender_user_id_)  
 elseif Ketort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 end
 end,nil)   
 end   
@@ -3523,19 +3523,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local Ketort = database:get(bot_id.."Keto:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if Ketort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."Keto:Special:User"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif Ketort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."Keto:Mod:User"..msg.chat_id_,result.sender_user_id_) 
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif Ketort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."Keto:Manager"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif Ketort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 end
 end,nil)   
 end   
@@ -3558,19 +3558,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local Ketort = database:get(bot_id.."Keto:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if Ketort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."Keto:Special:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif Ketort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."Keto:Mod:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif Ketort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."Keto:Manager"..msg.chat_id_,result.id_)  
 database:set(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif Ketort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 end
 else
 info = "⌔︙المعرف غلط"
@@ -3596,19 +3596,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local Ketort = database:get(bot_id.."Keto:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if Ketort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."Keto:Special:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif Ketort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."Keto:Mod:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif Ketort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."Keto:Manager"..msg.chat_id_,result.id_)  
 database:del(bot_id.."Keto:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif Ketort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTeam)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTeam")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- Keto 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/KetoTaem)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "KetoTaem")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 end
 else
 info = "⌔︙المعرف غلط"
@@ -6116,7 +6116,7 @@ if DevKeto(msg) then
 database:srem(bot_id.."Keto:GBan:User",result.id_)
 database:srem(bot_id.."Keto:Ban:User"..msg.chat_id_,result.id_)
 database:srem(bot_id.."Keto:Muted:User"..msg.chat_id_,result.id_)
-usertext = "\n⌔︙ العضو -› ["..result.title_.."](t.me/"..(username or "KetoTeam")..")"
+usertext = "\n⌔︙ العضو -› ["..result.title_.."](t.me/"..(username or "KetoTaem")..")"
 status  = "\n⌔︙ تم الغاء القيود عنه"
 texts = usertext..status
 send(msg.chat_id_, msg.id_,texts)
@@ -6152,7 +6152,7 @@ else
 database:srem(bot_id.."Keto:Ban:User"..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id.."Keto:Muted:User"..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = "\n⌔︙ العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTeam")..")"
+usertext = "\n⌔︙ العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "KetoTaem")..")"
 status  = "\n⌔︙ تم الغاء القيود عنه"
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6298,7 +6298,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"⌔︙ حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "KetoTeam")
+local UserName = (b.username_ or "KetoTaem")
 send(msg.chat_id_, msg.id_,"⌔︙منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 end,nil)   
 end
@@ -6318,7 +6318,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"⌔︙حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "KetoTeam")
+local UserName = (b.username_ or "KetoTaem")
 send(msg.chat_id_, msg.id_,"⌔︙تم ترقية منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 database:sadd(bot_id.."Keto:Basic:Constructor"..msg.chat_id_,b.id_)
 end,nil)   
@@ -7814,8 +7814,8 @@ if text == ("تحديث السورس") and DevKeto(msg) or text == ("تحديث 
 send(msg.chat_id_,msg.id_,'⌔︙تم تحديث السورس')
 os.execute('rm -rf Keto.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua')
-os.execute('wget https://raw.githubusercontent.com/KetoTeam/Keto/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/KetoTaem/Keto/master/Keto.lua')
+os.execute('wget https://raw.githubusercontent.com/KetoTaem/Keto/master/start.lua')
 dofile('Keto.lua')  
 return false
 end
@@ -7926,7 +7926,7 @@ if audios.Info == true then
 local Text ='⌔︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- Keto TeAM .',url="t.me/KetoTeam"}},
+{{text = '- Keto TeAM .',url="t.me/KetoTaem"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -7939,7 +7939,7 @@ send(msg.chat_id_, msg.id_, Textxt)
 end
 if (msg.content_.sticker_)  and msg.reply_to_message_id_ == 0 and database:get(bot_id.."Keto:Lock:Xn"..msg.chat_id_)=="del" then      
 sticker_id = msg.content_.sticker_.sticker_.persistent_id_
-st = https.request('https://Keto-source.tk/KetoTeAM/ImageInfo.php?token='..token..'&url='..sticker_id.."&type=sticker")
+st = https.request('https://Keto-source.tk/KetoTaem/ImageInfo.php?token='..token..'&url='..sticker_id.."&type=sticker")
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Keto:Basic:Constructor"..msg.chat_id_)
@@ -7961,7 +7961,7 @@ end
 end
 if (msg.content_.photo_) and msg.reply_to_message_id_ == 0 and database:get(bot_id.."Keto:Lock:Xn"..msg.chat_id_)=="del" then
 photo_id = msg.content_.photo_.sizes_[1].photo_.persistent_id_  
-Srrt = https.request('https://Keto-source.tk/KetoTeAM/ImageInfo.php?token='..token..'&url='..photo_id.."&type=photo")
+Srrt = https.request('https://Keto-source.tk/KetoTaem/ImageInfo.php?token='..token..'&url='..photo_id.."&type=photo")
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Keto:Basic:Constructor"..msg.chat_id_)
@@ -8133,7 +8133,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevKeto(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/KetoTeam0/files_Keto/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/KetoTaem0/files_Keto/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -8171,7 +8171,7 @@ t = "*⌔︙ الملف -› {"..file.."}\n⌔︙ تم تعطيله وحذفه �
 else
 t = "*⌔︙ بالتاكيد تم تعطيل وحذف ملف -› {"..file.."} \n✓*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/KetoTeam0/files_Keto/master/files_Keto/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/KetoTaem0/files_Keto/master/files_Keto/"..file)
 if res == 200 then
 os.execute("rm -fr Keto_Files/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -8191,7 +8191,7 @@ t = "*⌔︙ بالتاكيد تم تنزيل وتفعيل ملف -› {"..file.
 else
 t = "*⌔︙ الملف -› {"..file.."}\n⌔︙ تم تنزيله وتفعيله بنجاح \n*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/KetoTeam0/files_Keto/master/files_Keto/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/KetoTaem0/files_Keto/master/files_Keto/"..file)
 if res == 200 then
 local chek = io.open("Keto_Files/"..file,'w+')
 chek:write(json_file)
@@ -8262,7 +8262,7 @@ Text = [[
 *- Keto Team .*
  — — — — — — — — — 
      
-[⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .](http://t.me/KetoTeam)
+[⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .](http://t.me/KetoTaem)
      
 [⌔︙ Keto Developer .](http://t.me/uuuuu1)
  — — — — — — — — — 
@@ -8301,7 +8301,7 @@ Text = [[
 ⌔︙ م4 -› لعرض اوامر المنشئين
 ⌔︙ م5 -› لعرض اوامر المطورين
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8348,7 +8348,7 @@ Text = [[
 ⌔︙الكلايش
 ⌔︙السيلفي
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8420,7 +8420,7 @@ Text = [[
 ⌔︙مسح الصلاحيات
 ⌔︙مسح الرابط
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8467,7 +8467,7 @@ Text = [[
 ⌔︙تفعيل/تعطيل اوامر التحشيش
 ⌔︙تفعيل/تعطيل الرابط/جلب الرابط
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8503,7 +8503,7 @@ Text = [[
 ⌔︙اضف رسائل + العدد بالرد
 ⌔︙اضف مجوهرات + العدد بالرد
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8553,7 +8553,7 @@ Text = [[
 ⌔︙رفع/تنزيل منشئ اساسي
 ⌔︙مسح المنشئين الاساسين
  — — — — — — — — — 
-[⌔︙Ch Source](t.me/KetoTeam)
+[⌔︙Ch Source](t.me/KetoTaem)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8999,7 +8999,7 @@ local A = io.open("sudo.lua", 'w')
 A:write([[
 s = "uuuuu1"
 
-q = "KetoTeam"
+q = "KetoTaem"
 
 token = "]]..token..[["
 
@@ -9294,8 +9294,8 @@ if text == "تحديث السورس ⌔" or text == "تحديث سورس" then
 send(msg.chat_id_,msg.id_,'⌔︙تم تحديث السورس')
 os.execute('rm -rf Keto.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/KetoTeam/Keto/master/Keto.lua')
-os.execute('wget https://raw.githubusercontent.com/KetoTeam/Keto/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/KetoTaem/Keto/master/Keto.lua')
+os.execute('wget https://raw.githubusercontent.com/KetoTaem/Keto/master/start.lua')
 dofile('Keto.lua')  
 return false
 end
@@ -9325,7 +9325,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⌔︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9336,7 +9336,7 @@ local idchci = database:get(bot_id.."Keto:Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="⌔︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9348,7 +9348,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⌔︙تم اللغاء منعه بنجاح"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9358,7 +9358,7 @@ if DAata and DAata:match("^delallSticker(.*)$") and Addictive(data) then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="⌔︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9371,7 +9371,7 @@ if DAata and DAata:match("^delallanimation(.*)$") and Addictive(data) then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="⌔︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9384,7 +9384,7 @@ if DAata and DAata:match("^delallph(.*)$") and Addictive(data) then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="⌔︙تم اللغاء منع كل الصور"
 inline = {
-{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTeam'}},
+{{text = '⌔︙ Keto 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/KetoTaem'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9711,7 +9711,7 @@ if (data.ID == "UpdateOption" and data.value_.value_ == "Ready") then
 print("\27[34m"..[[
 >> The Bot is Running
 >> Bot source > Keto
->>Source channel > @KetoTeam
+>>Source channel > @KetoTaem
 >>Source developer > @uuuuu1
 
 
